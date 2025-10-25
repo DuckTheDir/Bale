@@ -342,29 +342,28 @@ namespace DataList
             return PackedString;
         }
 
+       
         /// <summary>
         /// Removes specific value and all it's copies and shifts values.
         /// </summary>
         /// <param name="theValue"></param>
         /// 
 
-        //--------- Not done , you can fix it. ------------
-        //public void RemoveSpecific(object theValue)
-        //{
-        //    int newI = 0;
-        //    for (int i = 0; i < Width; ++i)
-        //    {
-        //        if (!theValue.Equals(_items[i]))
-        //        {
-        //            Assign(newI, _items[i]);
-        //            ++newI;
-        //        }
+        
+        public void RemoveSpecific(object theValue)
+        {
+            int newI = 0;
+            for (int i = 0; i < Width; ++i)
+            {
+                if (!theValue.Equals(_items[i]))
+                {
+                    Assign(newI, _items[i]);
+                    ++newI;
+                }
 
-        //    }
-        //    Width = newI;
-        //}
-
-        //--------- Not done , you can fix it. ------------
+            }
+            Width = newI;
+        }
 
 
         /// <summary>
@@ -506,3 +505,4 @@ namespace DataList
 
 // works only for string / object Bales
 // - now nothing
+
